@@ -25,26 +25,16 @@ La demostración no consulta un modelo de IA, no tramita solicitudes, no reserva
 
 ## Publicación en Vercel
 
-El intento de creación y despliegue desde la conexión disponible fue rechazado con un error 403 de permisos para crear proyectos. No hay un despliegue de producción confirmado.
+La web está publicada en https://guiatramite.vercel.app. El código está en https://github.com/victorscodeit/guiatramite.
 
-Con una cuenta autorizada en el equipo `victorsanchocoma-4290s-projects`:
-
-1. Utilizar la carpeta `web/` como raíz del proyecto nuevo `guiatramite`.
-2. Elegir el preset **Other**. Esta web no necesita instalación de dependencias ni comando de build. Dejar el directorio de salida sin configurar.
-3. Desplegar esa carpeta. Incluye `vercel.json` con cabeceras y configuración de URLs.
-4. Verificar navegación, selección de idiomas, demo, ficha y descarga de propuesta.
-
-Alternativamente, desde una terminal con Node y una sesión propia de Vercel:
+El proyecto de Vercel `guiatramite` pertenece al equipo `victorsanchocoma-4290s-projects` y se despliega desde la carpeta `web/`. No hay comando de build. Para publicar cambios:
 
 ```bash
 cd web
-npx vercel login
-npx vercel --scope victorsanchocoma-4290s-projects --prod
+npx vercel --prod --scope victorsanchocoma-4290s-projects
 ```
 
-Revisar el equipo y seleccionar **crear un proyecto nuevo** con el nombre `guiatramite`. No vincular a otro proyecto existente. Si la cuenta carece de permisos para crear proyectos, deberá resolverlo una persona administradora del equipo.
-
-Documentación oficial: https://vercel.com/docs/cli/deploy
+La cuenta de Vercel todavía no puede conectar el repositorio de GitHub, así que un push a `main` no redespliega solo.
 
 ## Vista local
 
