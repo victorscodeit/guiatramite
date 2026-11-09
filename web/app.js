@@ -23,7 +23,7 @@ const ca={
  'closing.kicker':'SI US INTERESSA','closing.title':'Expliqueu-nos<br><span class="accent">com us podem ajudar.</span>','closing.body':'Si la vostra entitat vol incorporar aquesta experiència, escriviu-nos.','closing.cta':'Contactar','closing.download':'Descarregar presentació','closing.note':'Per a entitats públiques','footer.tagline':'Orientació per a persones. Suport per a entitats públiques.','footer.status':'Per a entitats públiques','footer.privacy':'Privacitat d’aquesta web','footer.access':'Accessibilitat','footer.note':'Orientació per a persones · Suport a entitats públiques',
  'brief.kicker':'CONTACTE','brief.title':'Escriviu-nos.','brief.intro':'Expliqueu-nos quina entitat sou i quin servei voleu cobrir. S’obre el correu amb el missatge preparat.','brief.org':'Entitat pública','brief.service':'Quin servei voleu cobrir?','brief.s1':'Primera acollida','brief.s2':'Atenció ciutadana','brief.s3':'Serveis socials','brief.s4':'Un altre servei de l’entitat','brief.priority':'Què voleu millorar?','brief.p1':'Preparació de les visites','brief.p2':'Comprensió de la informació','brief.p3':'Seguiment de l’acompanyament','brief.output':'Us responem per veure com encaixa a la vostra entitat.','brief.download':'Enviar missatge'
 };
-let siteLang = new URLSearchParams(location.search).get('lang')==='ca'?'ca':'es';
+let siteLang = new URLSearchParams(location.search).get('lang')==='es'?'es':'ca';
 let activeView='person', scenario='arrival', guideLang=siteLang, guideStep=0, pendingOnly=false, selectedCase='GT-012';
 const translate=key=>(siteLang==='ca'?ca[key]:original[key])||original[key]||key;
 function setLanguage(lang, updateURL=true){
@@ -41,7 +41,7 @@ function setLanguage(lang, updateURL=true){
   $('.demo-tabs').setAttribute('aria-label',lang==='ca'?'Vista de l’experiència':'Vista de la experiencia');
   $('#brief-result').textContent='';
   guideLang=lang;$('#demo-language').value=lang;renderGuide();renderQueue();
-  if(updateURL&&location.protocol!=='file:'){const url=new URL(location.href);if(lang==='ca')url.searchParams.set('lang','ca');else url.searchParams.delete('lang');history.replaceState(null,'',url);}
+  if(updateURL&&location.protocol!=='file:'){const url=new URL(location.href);if(lang==='es')url.searchParams.set('lang','es');else url.searchParams.delete('lang');history.replaceState(null,'',url);}
 }
 $$('[data-lang]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
 $('.menu-toggle').addEventListener('click',()=>{const open=$('.menu-toggle').getAttribute('aria-expanded')==='true';$('.menu-toggle').setAttribute('aria-expanded',String(!open));$('#mobile-nav').hidden=open;});
