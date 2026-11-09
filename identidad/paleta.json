@@ -1,0 +1,11 @@
+{
+  "marca": "GuíaTrámite",
+  "lema": "Cada paso, más claro.",
+  "colors": {
+    "verde_profundo": "#173D38",
+    "verde_claro": "#D8EEA0",
+    "fondo_calido": "#F7F8F2",
+    "salvia_suave": "#EAF0E5",
+    "texto_secundario": "#637366"
+  }
+}
